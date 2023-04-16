@@ -31,13 +31,6 @@ jobs:
           node-version: '19.2.0'
       - name: Install Dependencies
         run: npm install
-      - name: List content
-        run: cat ./vite.config.ts
-      - name: Show urls
-        run: |
-          echo ${{site.github.url}}
-          echo ${{site.url}}
-          echo ${{site.baseurl}}
       - name: Build dist files
         run: npm run build
       - name: Save dist files in cache
