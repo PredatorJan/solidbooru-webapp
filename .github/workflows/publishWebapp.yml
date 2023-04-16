@@ -36,8 +36,9 @@ jobs:
       - name: Save dist files in cache
         uses: actions/cache@v3.3.1
         with:
-          path: './dist/'
+          path: '/dist'
           key: dist-files
+          restore-keys: dist
           enableCrossOsArchive: true
   deploy:
     environment:
@@ -50,8 +51,9 @@ jobs:
       - name: Load dist files from cache
         uses: actions/cache@v3.3.1
         with:
-          path: './dist/'
+          path: './dist/*'
           key: dist-files
+          restore-keys: dist
           enableCrossOsArchive: true
           fail-on-cache-miss: true
       - name: Setup Pages
@@ -61,7 +63,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './dist'
+          path: './dist/*'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
