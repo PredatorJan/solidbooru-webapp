@@ -51,7 +51,7 @@ jobs:
       - name: Load dist files from cache
         uses: actions/cache@v3.3.1
         with:
-          path: './dist/*'
+          path: './dist'
           key: dist-files
           restore-keys: dist
           enableCrossOsArchive: true
@@ -59,11 +59,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: List content
-        run: ls ./dist
+        run: ls -R ./dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './dist/*'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
