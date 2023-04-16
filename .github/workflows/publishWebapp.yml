@@ -36,7 +36,7 @@ jobs:
       - name: Save dist files in cache
         uses: actions/cache@v3.3.1
         with:
-          path: './dist'
+          path: ${{ github.workspace }} + '/dist'
           key: dist-files
   deploy:
     environment:
@@ -49,7 +49,7 @@ jobs:
       - name: Load dist files from cache
         uses: actions/cache@v3.3.1
         with:
-          path: './dist'
+          path: ${{ github.workspace }} + '/dist'
           key: dist-files
       - name: Setup Pages
         uses: actions/configure-pages@v3
