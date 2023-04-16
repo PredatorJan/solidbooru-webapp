@@ -34,7 +34,7 @@ jobs:
       - name: Build dist files
         run: npm run build
       - name: Save dist files in cache
-        uses: actions/cache@2.1.8
+        uses: actions/cache@3.3.1
         with:
           path: './dist'
           key: dist-files
@@ -47,7 +47,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Load dist files from cache
-        uses: actions/cache@2.1.8
+        uses: actions/cache@3.3.1
         with:
           path: './dist'
           key: dist-files
