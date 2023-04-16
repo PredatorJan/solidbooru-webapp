@@ -28,7 +28,9 @@ jobs:
         with:
           node-version: '16'
       - name: Install Dependencies
-        run: npm install
+        run: |
+          cd solidbooru-webapp
+          npm install
       - name: Build dist
         run: npm run build
   deploy:
