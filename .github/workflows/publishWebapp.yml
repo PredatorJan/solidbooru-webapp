@@ -31,8 +31,8 @@ jobs:
           node-version: '16'
       - name: Install Dependencies
         run: npm install
-      - name: List package.json content
-        run: cat ./package.json
+      - name: List content
+        run: cat ./vite.config.ts
       - name: Build dist files
         run: npm run build
       - name: Save dist files in cache
