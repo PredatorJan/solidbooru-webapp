@@ -2,6 +2,7 @@
   "name": "solidbooru-webapp",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://predatorjan.github.io/solidbooru-webapp",
   "type": "module",
   "scripts": {
     "dev": "vite",
