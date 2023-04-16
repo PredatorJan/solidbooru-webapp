@@ -28,11 +28,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '19.2.0'
       - name: Install Dependencies
         run: npm install
-      - name: List content
-        run: cat ./vite.config.ts
       - name: Build dist files
         run: npm run build
       - name: Save dist files in cache
