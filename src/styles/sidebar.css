@@ -1,0 +1,19 @@
+.sidebar {
+    width: 5rem;
+    height: 100%;
+    padding: 10px;
+    gap: 5px;
+
+    border-right: 2px solid var(--accent);
+}
+
+.sidebar > label {
+    padding: 10px;
+    text-align: left;
+    flex-wrap: nowrap;
+}
+
+.sidebar > label:hover {
+    background-color: var(--accent);
+    color: black;
+}

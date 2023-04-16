@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    height: 3rem;
+
+    padding: 10px;
+    background-color: var(--primary-bg);
+
+    border-bottom: 2px solid var(--accent);
+}
+
+.leftDiv {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    flex-shrink: 2;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.centerDiv {
+    flex-shrink: 1;
+    flex-grow: 2;
+    width: 100%;
+}
+
+.rightDiv {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+
+    flex-shrink: 2;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+}
