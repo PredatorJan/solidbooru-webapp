@@ -36,7 +36,7 @@ jobs:
       - name: Save dist files in cache
         uses: actions/cache@v3.3.1
         with:
-          path: './dist/*'
+          path: './dist/'
           key: dist-files
           enableCrossOsArchive: true
   deploy:
@@ -50,7 +50,7 @@ jobs:
       - name: Load dist files from cache
         uses: actions/cache@v3.3.1
         with:
-          path: './dist/*'
+          path: './dist/'
           key: dist-files
           enableCrossOsArchive: true
           fail-on-cache-miss: true
