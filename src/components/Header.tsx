@@ -1,32 +1,8 @@
 import '../styles/header.css'
+import { toggleTheme } from '../utils/CustomizingUtils'
 import { toggleSidebar } from '../utils/NavUtils'
 
 function Header() {
-
-  let currentTheme: string = "light"
-
-  setTheme(currentTheme)
-
-  const storedTheme = localStorage.getItem("theme")
-  if(storedTheme) {
-    setTheme(storedTheme)
-  }
-
-  function setTheme(theme: string) {
-    currentTheme = theme
-    document.documentElement.setAttribute('data-theme', theme);
-  }
-
-  function toggleTheme() {
-    if(currentTheme === 'light') {
-      setTheme('dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      setTheme('light')
-      localStorage.setItem('theme', 'light')
-    }
-  }
-
 
   return (
     <div className="header">
