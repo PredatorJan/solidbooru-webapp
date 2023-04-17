@@ -6,62 +6,104 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --sidebar-width: 15rem;
+  --header-height: 3rem;
 }
 
-:root,
 [data-theme="light"] {
   --primary-bg: #FAF9F9;
-  --secondary-bg: #EEEEFF;
+  --secondary-bg: #EEEEEE;
   --primary-fg: #1E212B;
   --secondary-fg: #252A34;
-  --accent: #449DD1;
+  --accent: #a2d2ff;
   --positive: #37FF8B;
   --warning: #FFC800;
   --errror: #D81E5B;
   --info: #1E212B;
+
+  --black: #1E212B;
 }
 
 [data-theme="dark"] {
   --primary-bg: #1E212B;
   --secondary-bg: #252A34;
   --primary-fg: #F0F7EE;
-  --secondary-fg: #EEEEFF;
-  --accent: #449DD1;
+  --secondary-fg: #F5F5F5;
+  --accent: #a2d2ff;
   --positive: #37FF8B;
   --warning: #FFC800;
   --errror: #D81E5B;
   --info: #F0F7EE;
+
+  --black: #1E212B;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  width: 100vw;
-  height: 100%;
-  min-height: 100vh;
   background-color: var(--primary-bg);
   color: var(--primary-fg);
-}
 
-* {
-  -webkit-transition: background-color 100ms linear;
-  -moz-transition: background-color 100ms linear;
-  -o-transition: background-color 100ms linear;
-  -ms-transition: background-color 100ms linear;
   transition: background-color 100ms linear;
 }
 
-
-button {
-  padding: 10px;
-  border: 1px solid;
-  border-radius: 5px;
-  background-color: var(--primary-bg);
+.st-button-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-radius: 35px;
+  background-color: transparent;
   color: var(--primary-fg);
+
+  white-space: nowrap;
 }
 
-button:hover {
-  background-color: var(--accent);
-  color: black;
-
+.st-button-1:hover {
   cursor: pointer;
+  background-color: var(--accent);
+  color: var(--black);
+}
+
+.st-button-2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--accent);
+  color: var(--black);
+
+  white-space: nowrap;
+}
+
+.st-button-2:hover {
+  cursor: pointer;
+  background-color: var(--accent);
+  transform: scale(1.1);
+  transition-duration: 0.2;
+}
+
+.nav-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-fg);
+
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  background-color: var(--accent);
+  color: var(--black);
 }

@@ -1,4 +1,5 @@
 import '../styles/header.css'
+import { toggleSidebar } from '../utils/NavUtils'
 
 function Header() {
 
@@ -30,14 +31,15 @@ function Header() {
   return (
     <div className="header">
       <div className='leftDiv'>
-
+        <button className='st-button-1' onClick={toggleSidebar}>
+          Menu
+        </button>
       </div>
       <div className='centerDiv'>
-        <h1 className='title'>Solidbooru</h1>
       </div>
       <div className='rightDiv'>
-        <button onClick={toggleTheme}>Toggle Theme</button>
-        <button id='loginBtn'>Login</button>
+        <button className='st-button-1' onClick={toggleTheme}>Toggle Theme</button>
+        <button className='st-button-1' id='loginBtn'>Login</button>
       </div>
     </div>
   )

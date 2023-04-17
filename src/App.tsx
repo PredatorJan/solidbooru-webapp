@@ -10,6 +10,8 @@ function App() {
     <div id='app'>
       <Header></Header>
       <Sidebar></Sidebar>
+      <div className='content'>
+      </div>
     </div>
   )
 }
